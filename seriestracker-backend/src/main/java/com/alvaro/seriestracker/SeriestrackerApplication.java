@@ -10,7 +10,7 @@ public class SeriestrackerApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(SeriestrackerApplication.class, args);
- 
+    
 
     }
 
