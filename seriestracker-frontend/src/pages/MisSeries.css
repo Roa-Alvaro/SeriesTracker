@@ -1,0 +1,141 @@
+/* MisSeries.css */
+.series-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    gap: 10px;
+}
+
+.serie-card-tracker {
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    border: 3px solid transparent;
+    height: auto; 
+}
+
+.estado-viendo { border-color: #2ecc71; }
+.estado-finalizada { border-color: #e74c3c; }
+.estado-pendiente { border-color: #f1c40f; }
+
+.poster-container {
+    width: 100%;
+    aspect-ratio: 2 / 3;
+}
+
+.serie-poster-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.serie-info-content {
+    padding: 8px;
+    display: flex;
+    flex-direction: column;
+    /* Esto asegura que los elementos se repartan el espacio verticalmente */
+    gap: 4px; 
+}
+
+.serie-info-content h3 {
+    font-size: 0.85rem;
+    margin: 0;
+    padding: 0;
+    /* Evita que el título se expanda o se pise */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: #333;
+    display: block; /* Fuerza a que sea una línea independiente */
+}
+
+.platform-text {
+    font-size: 0.7rem;
+    font-weight: bold;
+    color: #2563eb; /* Un azul claro para que se distinga bien */
+    margin: 0;
+    display: block;
+}
+
+.progress-info {
+    font-size: 0.7rem;
+    color: #666;
+    margin: 2px 0;
+}
+
+.btn-plus-one {
+    width: 100%;
+    padding: 6px;
+    font-size: 0.75rem;
+    background: #2563eb;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 4px;
+}
+/* Estilo base del recuadro */
+.estado-badge-rect {
+    padding: 3px 8px;
+    border-radius: 4px;
+    font-weight: bold;
+    color: #000; /* Letras siempre en negro */
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    display: inline-block;
+}
+
+/* Colores según el estado */
+.finalizada {
+    background-color: #e74c3c; /* Rojo */
+}
+
+.viendo {
+    background-color: #2ecc71; /* Verde */
+}
+
+.pendiente {
+    background-color: #f1c40f; /* Amarillo */
+}
+
+.serie-card {
+  background: #161616;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+/* El efecto de borde eléctrico al pasar el ratón */
+.serie-card:hover {
+  border-color: var(--electric-blue);
+  box-shadow: 0 0 15px var(--glow-blue);
+  transform: translateY(-5px);
+}
+
+.serie-img {
+  transition: transform 0.3s ease;
+}
+
+.serie-card:hover .serie-img {
+  transform: scale(1.05); /* Zoom suave a la imagen */
+}
+.btn-delete {
+    background: rgba(231, 76, 60, 0.1);
+    color: #ff4d4d;
+    border: 1px solid rgba(231, 76, 60, 0.3);
+    padding: 6px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    margin-top: 10px;
+}
+
+.btn-delete:hover {
+    background: #e74c3c;
+    color: white;
+    box-shadow: 0 0 15px rgba(231, 76, 60, 0.5);
+    transform: scale(1.05);
+}

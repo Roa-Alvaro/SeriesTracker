@@ -1,0 +1,173 @@
+/* DetalleSerie.css */
+
+.detalle-main-wrapper {
+  position: relative;
+  min-height: 100vh;
+  background-color: #121212; /* Fondo oscuro tipo cine */
+  color: white;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+}
+
+/* Efecto de fondo desenfocado */
+.detalle-backdrop {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-size: cover;
+  background-position: center;
+  filter: blur(40px) brightness(0.3);
+  z-index: 1;
+  transform: scale(1.1);
+}
+
+.detalle-container {
+  position: relative;
+  z-index: 2;
+  max-width: 1000px;
+  width: 100%;
+  display: flex;
+  gap: 40px;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 30px;
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+.detalle-poster-side {
+  flex: 0 0 250px; /* Un poco más estrecho para portátiles */
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centra la plataforma bajo la foto */
+}
+
+
+.main-poster-img {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+  margin-bottom: 20px; /* ESTO separa la foto de la pastilla azul */
+}
+
+/* Ajuste de la "pastilla" de plataforma */
+.platform-pill {
+  /* Si la tenías como 'absolute', quítale el position y usa esto: */
+  position: relative; 
+  background: #2563eb;
+  padding: 8px 20px;
+  border-radius: 20px;
+  font-weight: bold;
+  font-size: 0.9rem;
+  width: fit-content; /* Para que no ocupe todo el ancho */
+}
+
+/* Columna Info */
+.detalle-info-side {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+/* Espacio entre Título y el Badge de Estado */
+.info-header {
+  margin-bottom: 25px; /* Espacio con la sinopsis de abajo */
+  display: flex;
+  flex-direction: column;
+  gap: 15px; /* ESTO separa el H1 del Badge de estado */
+}
+
+.info-header h1 {
+  margin: 0;
+  font-size: 2.5rem;
+}
+
+.anio-tag {
+  color: #aaa;
+  font-weight: 300;
+}
+
+.status-badge {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+.status-badge.green { background: #2ecc71; }
+.status-badge.red { background: #e74c3c; }
+.status-badge.yellow { background: #f1c40f; color: #000; } /* Amarillo con texto negro */
+
+.sinopsis-section p {
+  line-height: 1.6;
+  color: #ddd;
+  font-size: 1rem;
+}
+
+/* Tarjeta de Gestión */
+.tracker-card {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  border-radius: 15px;
+  margin-top: 10px;
+}
+
+.tracker-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.tracker-item label {
+  display: block;
+  font-size: 0.8rem;
+  color: #bbb;
+  margin-bottom: 5px;
+}
+
+.counter-control {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: rgba(0,0,0,0.2);
+  padding: 5px;
+  border-radius: 8px;
+  justify-content: space-between;
+}
+
+.counter-control button {
+  background: #333;
+  color: white;
+  border: none;
+  width: 25px;
+  height: 25px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.status-select {
+  width: 100%;
+  padding: 8px;
+  border-radius: 8px;
+  background: #333;
+  color: white;
+  border: none;
+}
+
+.btn-save {
+  width: 100%;
+  margin-top: 20px;
+  padding: 10px;
+  background: #2ecc71;
+  border: none;
+  color: white;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.btn-save:hover { background: #27ae60; }
